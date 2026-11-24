@@ -16,6 +16,20 @@ EXTRA_DIST += README.md
 EXTRA_DIST += CHANGELOG.md
 EXTRA_DIST += ChangeLog.old
 
+# grpc2 is a separately buildable and packageable component; it is only
+# distributed here. See grpc2/README.md.
+EXTRA_DIST += \
+	grpc2/README.md \
+	grpc2/CMakeLists.txt \
+	grpc2/Makefile.am \
+	grpc2/configure.ac \
+	grpc2/libprotobuf-c-grpc2.pc.in \
+	grpc2/m4/pkg.m4 \
+	grpc2/protobuf-c-grpc2/protobuf-c-grpc2.c \
+	grpc2/protobuf-c-grpc2/protobuf-c-grpc2.h \
+	grpc2/t/loopback.c \
+	grpc2/t/loopback.proto
+
 AM_CPPFLAGS = \
 	-include $(top_builddir)/config.h \
 	-I${top_srcdir}/protobuf-c \
@@ -347,20 +361,6 @@ BUILT_SOURCES += \
 EXTRA_DIST += \
 	t/issue745/issue745.proto
 
-endif # CROSS_COMPILING
-
-endif # BUILD_COMPILER
-
-EXTRA_DIST += \
-	t/test.proto \
-	t/test-full.proto \
-	t/test-optimized.proto \
-	t/test-proto3.proto \
-	t/generated-code2/common-test-arrays.h
-
-#
-#
-
 # Streaming service descriptors and dispatch
 check_PROGRAMS += \
 	t/streaming/streaming
@@ -377,6 +377,20 @@ BUILT_SOURCES += \
 	t/streaming/streaming.pb-c.c t/streaming/streaming.pb-c.h
 EXTRA_DIST += \
 	t/streaming/streaming.proto
+
+endif # CROSS_COMPILING
+
+endif # BUILD_COMPILER
+
+EXTRA_DIST += \
+	t/test.proto \
+	t/test-full.proto \
+	t/test-optimized.proto \
+	t/test-proto3.proto \
+	t/generated-code2/common-test-arrays.h
+
+#
+#
 #
 
 CLEANFILES += $(BUILT_SOURCES)

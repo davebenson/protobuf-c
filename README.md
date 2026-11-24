@@ -52,6 +52,12 @@ If using autotools, the `PKG_CHECK_MODULES` macro can be used to detect the pres
 
 This will place compiler flags in the `PROTOBUF_C_CFLAGS` variable and linker flags in the `PROTOBUF_C_LDFLAGS` variable. Read [more information here](https://autotools.info/pkgconfig/pkg_check_modules.html) about the `PKG_CHECK_MODULES` macro.
 
+## gRPC
+
+The optional, separately packaged `grpc2/` directory provides gRPC over
+HTTP/2 using nghttp2 version 2; see `grpc2/README.md`. protobuf-c itself does
+not depend on it.
+
 ## Versioning
 
 `protobuf-c` follows the [Semantic Versioning Specification](http://semver.org/) as of version 1.0.0.
