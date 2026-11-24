@@ -10,7 +10,8 @@
 * New, separately packageable `grpc2/` component: gRPC over HTTP/2 built on
   nghttp2-v2. It builds `libprotobuf-c-grpc2` (core, with a server builder and
   pluggable I/O and TLS interfaces) plus optional `-uv` and `-openssl`
-  adapter libraries.
+  adapter libraries. Servers and clients are assembled with builders; the
+  client reconnects lazily with backoff.
 
 # [1.5.2] - 2025-04-06
 
