@@ -19,16 +19,33 @@ EXTRA_DIST += ChangeLog.old
 # grpc2 is a separately buildable and packageable component; it is only
 # distributed here. See grpc2/README.md.
 EXTRA_DIST += \
-	grpc2/README.md \
 	grpc2/CMakeLists.txt \
 	grpc2/Makefile.am \
+	grpc2/README.md \
 	grpc2/configure.ac \
+	grpc2/examples/greeter.proto \
+	grpc2/examples/libuv-client.c \
+	grpc2/examples/libuv-server.c \
+	grpc2/examples/smoke-test.sh \
+	grpc2/examples/uv-grpc2.h \
+	grpc2/libprotobuf-c-grpc2-openssl.pc.in \
+	grpc2/libprotobuf-c-grpc2-uv.pc.in \
 	grpc2/libprotobuf-c-grpc2.pc.in \
 	grpc2/m4/pkg.m4 \
+	grpc2/openssl/protobuf-c-grpc2-openssl.c \
+	grpc2/protobuf-c-grpc2/protobuf-c-grpc2-builder.h \
+	grpc2/protobuf-c-grpc2/protobuf-c-grpc2-internal.h \
+	grpc2/protobuf-c-grpc2/protobuf-c-grpc2-io.h \
+	grpc2/protobuf-c-grpc2/protobuf-c-grpc2-openssl.h \
+	grpc2/protobuf-c-grpc2/protobuf-c-grpc2-server.c \
+	grpc2/protobuf-c-grpc2/protobuf-c-grpc2-uv.h \
 	grpc2/protobuf-c-grpc2/protobuf-c-grpc2.c \
 	grpc2/protobuf-c-grpc2/protobuf-c-grpc2.h \
+	grpc2/t/builder.c \
 	grpc2/t/loopback.c \
-	grpc2/t/loopback.proto
+	grpc2/t/loopback.proto \
+	grpc2/t/protocol.c \
+	grpc2/uv/protobuf-c-grpc2-uv.c
 
 AM_CPPFLAGS = \
 	-include $(top_builddir)/config.h \
